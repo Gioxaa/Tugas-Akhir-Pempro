@@ -15,12 +15,10 @@ void tampilkan_kamar(kamar ruangan[], int jumlah) {
         const char *statusBayar;
 
         if (ruangan[i].statusKamar == 0) {
-            // kamar kosong
             nama        = "-";
             statusKamar = "Kosong";
             statusBayar = "-";
         } else {
-            // kamar terisi
             if (ruangan[i].nama[0] == '\0') {
                 nama = "-";
             } else {
@@ -35,8 +33,7 @@ void tampilkan_kamar(kamar ruangan[], int jumlah) {
             }
         }
 
-        printf("| %-8d | %-20s | %-13s | %-14s |\n",
-               no, nama, statusKamar, statusBayar);
+        printf("| %-8d | %-20s | %-13s | %-14s |\n", no, nama, statusKamar, statusBayar);
     }
 
     printf("+----------+----------------------+---------------+----------------+\n");
