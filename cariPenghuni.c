@@ -26,6 +26,6 @@ void cari_penghuni(kamar ruangan[], int jumlah) {
         printf("Status Bayar: %s\n", ruangan[i].statusBayar == 1 ? "Lunas" : "Belum Lunas");
         printf("Status Kamar: %s\n", ruangan[i].statusKamar == 1 ? "Terisi" : "Kosong");
     } else {
-        printf("Pe--nghuni tidak ditemukan\n");
+        printf("Penghuni tidak ditemukan\n");
     }
 }

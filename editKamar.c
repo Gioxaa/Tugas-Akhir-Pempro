@@ -3,7 +3,7 @@
 
 void edit_kamar(kamar ruangan[], int jumlah) {
     int noKamar;
-    int index;
+    int i;
     int pilihan;
     
     printf("Kamar nomor berapa yang mau diedit?: ");
@@ -14,15 +14,15 @@ void edit_kamar(kamar ruangan[], int jumlah) {
         return;
     }
     
-    index = noKamar - 1;
-    if(ruangan[index].statusKamar == 0) {
+    i = noKamar - 1;
+    if(ruangan[i].statusKamar == 0) {
         printf("\nKamar %d kosong\n", noKamar);
         return;
     }
 
     printf("Data Kamar Saat ini: \n");
-    printf("Nama\t\t: %s\n", ruangan[index].nama);
-    printf("Status Bayar\t: %s\n", ruangan[index].statusBayar == 1 ? "Lunas" : "Belum Lunas");
+    printf("Nama\t\t: %s\n", ruangan[i].nama);
+    printf("Status Bayar\t: %s\n", ruangan[i].statusBayar == 1 ? "Lunas" : "Belum Lunas");
 
     printf("Pilih yang ingin diubah\n");
     printf("1. Nama Penghuni \n");
@@ -33,17 +33,17 @@ void edit_kamar(kamar ruangan[], int jumlah) {
     switch(pilihan) {
         case 1:
             printf("\nMasukkan nama penghuni baru: ");
-            scanf("%s", &ruangan[index].nama);
+            scanf("%s", &ruangan[i].nama);
             while(1) {
                 printf("Masukkan status bayar(1 sudah / 0 belum): ");
-                scanf("%d", &ruangan[index].statusBayar);
+                scanf("%d", &ruangan[i].statusBayar);
     
-                if(ruangan[index].statusBayar == 1) {
-                    ruangan[index].statusBayar = 1;
+                if(ruangan[i].statusBayar == 1) {
+                    ruangan[i].statusBayar = 1;
                     printf("Oke cuan!\n");
                     break;
-                } else if (ruangan[index].statusBayar == 0) {
-                    ruangan[index].statusBayar = 0;
+                } else if (ruangan[i].statusBayar == 0) {
+                    ruangan[i].statusBayar = 0;
                     printf("jangan lupa di tagih!\n");
                     break;
                 } else {
@@ -55,13 +55,13 @@ void edit_kamar(kamar ruangan[], int jumlah) {
         case 2:
             while(1) {
                 printf("Masukkan status bayar(1 sudah / 0 belum): ");
-                scanf("%d", &ruangan[index].statusBayar);
-                if(ruangan[index].statusBayar == 1) {
-                    ruangan[index].statusBayar = 1;
+                scanf("%d", &ruangan[i].statusBayar);
+                if(ruangan[i].statusBayar == 1) {
+                    ruangan[i].statusBayar = 1;
                     printf("Oke cuan!\n");
                     break;
-                } else if (ruangan[index].statusBayar == 0) {
-                    ruangan[index].statusBayar = 0;
+                } else if (ruangan[i].statusBayar == 0) {
+                    ruangan[i].statusBayar = 0;
                     printf("jangan lupa di tagih!\n");
                     break;
                 } else {

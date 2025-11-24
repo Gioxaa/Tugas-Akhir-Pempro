@@ -2,11 +2,8 @@
 #include "header/kamar.h"
 
 void kosongkan_kamar(kamar ruangan[], int jumlah) {
-    int i=0;
     int noKamar;
-    int index;
-
-    noKamar = index + 1;
+    int i;
 
     printf("Masukkan nomor kamar yang ingin di kosongkan: ");
     scanf("%d", &noKamar);
@@ -16,15 +13,15 @@ void kosongkan_kamar(kamar ruangan[], int jumlah) {
         return;
     }
 
-    index = noKamar - 1;
-    if(ruangan[index].statusKamar == 0) {
+    i = noKamar - 1;
+    if(ruangan[i].statusKamar == 0) {
         printf("\nKamar %d kosong\n", noKamar);
         return;
     }
 
-    ruangan[index].nama[0] = '\0';
-    ruangan[index].statusBayar = 0;
-    ruangan[index].statusKamar = 0;
+    ruangan[i].nama[0] = '\0';
+    ruangan[i].statusBayar = 0;
+    ruangan[i].statusKamar = 0;
     printf("\nKamar %d berhasil di kosongkan\n", noKamar);
 
     
