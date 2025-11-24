@@ -16,16 +16,23 @@ int stringCompare(char str1[], char str2[]) {
 void cari_penghuni(kamar ruangan[], int jumlah) {
     int i;
     char nama[100];
+    int found = 0;
     
     printf("Masukkan Nama yang ingin dicari: ");
-    scanf("%s", &nama);
-
-    if(stringCompare(nama, ruangan[i].nama) == 0) {
-        printf("Nama Penghuni: %s\n", ruangan[i].nama);
-        printf("Nomor Kamar: %d\n", ruangan[i].nomor);
-        printf("Status Bayar: %s\n", ruangan[i].statusBayar == 1 ? "Lunas" : "Belum Lunas");
-        printf("Status Kamar: %s\n", ruangan[i].statusKamar == 1 ? "Terisi" : "Kosong");
-    } else {
+    scanf("%s", nama);
+    for(i=0;i<jumlah;i++) {
+        if(ruangan[i].statusKamar == 0) {
+            continue;
+        }
+        if(stringCompare(nama, ruangan[i].nama) == 0) {
+            printf("Nama Penghuni: %s\n", ruangan[i].nama);
+            printf("Nomor Kamar: %d\n", ruangan[i].nomor);
+            printf("Status Bayar: %s\n", ruangan[i].statusBayar == 1 ? "Lunas" : "Belum Lunas");
+            printf("Status Kamar: %s\n", ruangan[i].statusKamar == 1 ? "Terisi" : "Kosong");
+            found = 1;
+        } 
+    }
+    if(!found) {
         printf("Penghuni tidak ditemukan\n");
     }
 }
