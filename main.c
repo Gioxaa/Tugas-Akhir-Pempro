@@ -6,7 +6,7 @@
 int main() {
     kamar ruangan[10];
 
-    int opsi;
+    int opsi; 
 
     for (int i=0; i<jumlahKamar; i++) {
         ruangan[i].nomor = i+1;

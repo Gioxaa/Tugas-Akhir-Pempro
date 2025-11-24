@@ -3,7 +3,7 @@
 
 void tambah_penghuni(kamar ruangan[], int jumlah) {
     int noKamar;
-    int index;
+    int i;
     int statusBayar;
 
     printf("Masukkan nomor kamar: ");
@@ -14,25 +14,25 @@ void tambah_penghuni(kamar ruangan[], int jumlah) {
         printf("\nNomor kamar tidak valid\n");
         return;
     }
-    index = noKamar - 1;
+    i = noKamar - 1;
 
-    if (ruangan[index].statusKamar == 1) {
-        printf("Kamar %d sudah terisi oleh %s.\n", noKamar, ruangan[index].nama);
+    if (ruangan[i].statusKamar == 1) {
+        printf("Kamar %d sudah terisi oleh %s.\n", noKamar, ruangan[i].nama);
         return;
     }
 
     printf("Masukkan Nama Penghuni: ");
-    scanf("%44s", ruangan[index].nama);
+    scanf("%44s", ruangan[i].nama);
 
     while(1) {
         printf("Masukkan status bayar(1 sudah / 0 belum): ");
         scanf("%d", &statusBayar);
         if (statusBayar == 1) {
-            ruangan[index].statusBayar = 1;
+            ruangan[i].statusBayar = 1;
             printf("Oke cuan!\n");
             break;
         } else if (statusBayar == 0) {
-            ruangan[index].statusBayar = 0;
+            ruangan[i].statusBayar = 0;
             printf("jangan lupa di tagih!\n");
             break;  
         } else {
@@ -41,6 +41,6 @@ void tambah_penghuni(kamar ruangan[], int jumlah) {
 
     }
 
-    ruangan[index].nomor       = noKamar;
-    ruangan[index].statusKamar = 1;
+    ruangan[i].nomor       = noKamar;
+    ruangan[i].statusKamar = 1;
 }
