@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "header/kamar.h"
 #define jumlahKamar 10
 
@@ -16,13 +17,18 @@ int main() {
     }
 
     do {
-        printf("\nSelamat datang di aplikasi Manajemen Kost!\n");
-        printf("1. Tambahkan Penghuni\n");
-        printf("2. Tampilkan Seluruh Data kamar\n");
-        printf("3. Edit Data Kamar\n");
-        printf("4. Kosongkan Kamar\n");
-        printf("5. Cari Penghuni\n");
-        printf("6. Keluar\n");
+        // system("cls");
+        printf("╔═══════════════════════════════════════════╗\n");
+        printf("║        Selamat datang di aplikasi         ║\n");
+        printf("║           Manajemen Kost!                 ║\n");
+        printf("╠═══════════════════════════════════════════╣\n");
+        printf("║ 1. Tambahkan Penghuni                     ║\n");
+        printf("║ 2. Tampilkan Seluruh Data kamar           ║\n");
+        printf("║ 3. Edit Data Kamar                        ║\n");
+        printf("║ 4. Kosongkan Kamar                        ║\n");
+        printf("║ 5. Cari Penghuni                          ║\n");
+        printf("║ 6. Keluar                                 ║\n");
+        printf("╚═══════════════════════════════════════════╝\n");
         printf("Silahkan pilih opsi diatas: ");
         scanf("%d", &opsi);
 
