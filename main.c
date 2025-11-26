@@ -17,8 +17,7 @@ int main() {
     }
 
     do {
-        // system("cls");
-        printf("╔═══════════════════════════════════════════╗\n");
+        printf("\n\n╔═══════════════════════════════════════════╗\n");
         printf("║        Selamat datang di aplikasi         ║\n");
         printf("║           Manajemen Kost!                 ║\n");
         printf("╠═══════════════════════════════════════════╣\n");
