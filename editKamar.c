@@ -9,6 +9,7 @@ void edit_kamar(kamar ruangan[], int jumlah) {
     printf("Kamar nomor berapa yang mau diedit?: ");
     scanf("%d", &noKamar);
     
+    
     if (noKamar < 1 || noKamar > jumlah) {
         printf("\nNomor kamar tidak valid\n");
         return;

@@ -15,7 +15,7 @@ void tampilkan_kamar(kamar ruangan[], int jumlah) {
         const char *statusBayar;
 
         if (ruangan[i].statusKamar == 0) {
-            nama        = "-";
+            nama = "-";
             statusKamar = "Kosong";
             statusBayar = "-";
         } else {
